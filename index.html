@@ -22,6 +22,8 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="js/vendor/jquery.validate.min.js"></script>  
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -76,10 +78,63 @@
                   -->
           </div>
           <div class="form-group required">
-            <label class="col-sm-3 control-label" for="your-state"><span class="glyphicon glyphicon-question-sign" title="Two-letter state abbreviation."></span> State</label>
-            <div class="col-sm-9">
-              <input type="text" class="form-control" name="your-state" id="your-state" placeholder="Your State">
-            </div>
+            <label class="col-sm-3 control-label" for="your-state">State</label>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <select name="state" class="form-control" required>
+                        <option vallue=" ">Choose State</option>
+                        <option value="AL">AL</option>
+                        <option value="AK">AK</option>
+                        <option value="AZ">AZ</option>
+                        <option value="AR">AR</option>
+                        <option value="CA">CA</option>
+                        <option value="CO">CO</option>
+                        <option value="CT">CT</option>
+                        <option value="DE">DE</option>
+                        <option value="DC">DC</option>
+                        <option value="FL">FL</option>
+                        <option value="GA">GA</option>
+                        <option value="HI">HI</option>
+                        <option value="ID">ID</option>
+                        <option value="IL">IL</option>
+                        <option value="IN">IN</option>
+                        <option value="IA">IA</option>
+                        <option value="KS">KS</option>
+                        <option value="KY">KY</option>
+                        <option value="LA">LA</option>
+                        <option value="ME">ME</option>
+                        <option value="MD">MD</option>
+                        <option value="MA">MA</option>
+                        <option value="MI">MI</option>
+                        <option value="MN">MN</option>
+                        <option value="MS">MS</option>
+                        <option value="MO">MO</option>
+                        <option value="MT">MT</option>
+                        <option value="NE">NE</option>
+                        <option value="NV">NV</option>
+                        <option value="NH">NH</option>
+                        <option value="NJ">NJ</option>
+                        <option value="NM">NM</option>
+                        <option value="NY">NY</option>
+                        <option value="NC">NC</option>
+                        <option value="ND">ND</option>
+                        <option value="OH">OH</option>
+                        <option value="OK">OK</option>
+                        <option value="OR">OR</option>
+                        <option value="PA">PA</option>
+                        <option value="RI">RI</option>
+                        <option value="SC">SC</option>
+                        <option value="SD">SD</option>
+                        <option value="TN">TN</option>
+                        <option value="TX">TX</option>
+                        <option value="UT">UT</option>
+                        <option value="VT">VT</option>
+                        <option value="VA">VA</option>
+                        <option value="WA">WA</option>
+                        <option value="WV">WV</option>
+                        <option value="WI">WI</option>
+                        <option value="WY">WY</option>
+                    </select> 
+                    </div>
             <!-- TODO: Make validation for state according to these rules:
                   * Field must not be blank
                   * Field must contain exactly two letters
@@ -94,8 +149,7 @@
             <!-- TODO: Make validation for ZIP according to these rules:
                   * Field must not be blank
                   * Field must be an integer (only whole numbers)
-                  * Field must have 5 digits
-                  -->
+                  * Field must have 5 digits-->
           </div>
         </fieldset>
         <fieldset>
@@ -129,7 +183,7 @@
             <div class="col-sm-9">
               <div class="row">
                 <div class="col-xs-3">
-                  <select class="form-control col-sm-2" name="expiry-month" id="expiry-month">
+                  <select class="form-control col-sm-2" name="expiry-month" id="expiry-month" required>
                     <option>Month</option>
                     <option value="01">Jan (01)</option>
                     <option value="02">Feb (02)</option>
@@ -146,7 +200,7 @@
                   </select>
                 </div>
                 <div class="col-xs-3">
-                  <select class="form-control" name="expiry-year">
+                  <select class="form-control" name="expiry-year" required>
                     <option value="15">2015</option>
                     <option value="16">2016</option>
                     <option value="17">2017</option>
@@ -183,7 +237,7 @@
             <div class="col-sm-9">
               <div class="row">
                 <div class="col-xs-3">
-                  <select class="form-control col-sm-2" name="shipping-method" id="shipping-method">
+                  <select class="form-control col-sm-2" name="shipping-method" id="shipping-method" required>
                     <option>Select One</option>
                     <option value="Ground">Ground</option>
                     <option value="Air">Air</option>
@@ -221,7 +275,7 @@
       <hr>
 
       <footer>
-        <p>&copy; Jane Student 2015</p>
+        <p>&copy; Aaron Highlands Seattle U WebDev Student</p>
       </footer>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
